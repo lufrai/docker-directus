@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -yq git \
     cd api && curl -sL 'https://getcomposer.org/installer' | php && \
     php composer.phar install --no-dev --no-progress --prefer-dist && \
     mkdir -p /var/www/html/media && \
-    chown -R www-data:www-data /var/www/html && \
+    # chown -R www-data:www-data /var/www/html && \
     a2enmod rewrite && \
 
     chmod +x /opt/init.sh && \
